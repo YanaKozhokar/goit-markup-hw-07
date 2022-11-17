@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--backdrop);
+  background-color: $backdrop;
   transition: opacity 250ms linear, visibility 300ms linear;
   &.is-hidden {
     opacity: 0;
@@ -19,7 +19,7 @@
   transform: translate(-50%, -50%);
   min-width: 528px;
   min-height: 581px;
-  background-color: var(--background-color-white);
+  background-color: $background-color-white;
   transform: translate(-50% -50%), scale(1);
   transition: transform 1000ms linear;
   .backdrop.is-hidden & {
@@ -43,11 +43,14 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid var(--btn-close-border);
+  border: 1px solid $btn-close-border;
+  &:hover {
+    background-color: $background-color-white;
+  }
 }
 
 .btn-close:hover .btn-close-icon {
-  fill: var(--color-accent);
+  fill: $color-accent;
 }
 
 .modal-title {
@@ -56,7 +59,7 @@
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--title-color);
+  color: $title-color;
 }
 
 .form {
@@ -73,7 +76,7 @@
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 
 .form__input-container {
@@ -85,16 +88,15 @@
   margin-top: 4px;
   width: 100%;
   height: 40px;
-  border: 1px solid var(--input-border);
+  border: 1px solid $input-border;
   border-radius: 4px;
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.input:focus {
-  outline: transparent;
-  border-color: var(--color-accent);
+  &:focus {
+    outline: transparent;
+    border-color: $color-accent;
+  }
 }
 
 .user-name,
@@ -108,11 +110,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  fill: var(--modal-icon-fill);
-}
-
-.input:focus + .input-icon {
-  fill: var(--color-accent);
+  fill: $modal-icon-fill;
+  .input:focus + & {
+    fill: $color-accent;
+  }
 }
 
 .comment {
@@ -122,18 +123,16 @@
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.comment:focus {
-  border-color: var(--color-accent);
-}
-
-.comment::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: var(--modal-placeholder);
+  &:focus {
+    border-color: $color-accent;
+  }
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $modal-placeholder;
+  }
 }
 
 .form__label-policy {
@@ -146,37 +145,33 @@
 }
 
 .form__policy-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
+  &::before {
+    margin-right: 8.38px;
+    content: '';
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-color;
+    border-radius: 2px;
+  }
 }
 
-.form__policy-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.form__policy-text::before {
-  margin-right: 8.38px;
-  content: '';
-  width: 16px;
-  height: 15px;
-  border: 2px solid #212121;
-  border-radius: 2px;
+.checkbox:checked + .form__policy-text::before {
+  background-color: $color-accent;
+  border-color: $color-accent;
+  background-image: url(../images/check.svg);
 }
 
 .policy-link {
   margin-left: 7px;
-  color: var(--color-accent);
-}
-
-.checkbox:checked + .form__policy-text::before {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  background-image: url(../images/check.svg);
+  color: $color-accent;
 }
 
 .form__button {

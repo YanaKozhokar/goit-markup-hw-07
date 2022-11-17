@@ -3,7 +3,7 @@
   padding-top: 200px;
   padding-bottom: 200px;
   max-width: 1600px;
-  background-color: var(--background-color-dark);
+  background-color: $background-color-dark;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/background.jpg);
   background-size: cover;
@@ -20,12 +20,14 @@
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--secondary-text-color);
+  color: $secondary-text-color;
 }
 
-.hero .button {
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 32px;
+.hero {
+  .button {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 32px;
+  }
 }

@@ -7,7 +7,7 @@
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-  color: var(--title-color);
+  color: $title-color;
 }
 
 .about-us__services-list {
@@ -37,6 +37,6 @@
   line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
-  color: var(--secondary-text-color);
+  color: $secondary-text-color;
   background: rgba(47, 48, 58, 0.8);
 }
