@@ -78,11 +78,11 @@
   }
 }
 
-.subscription {
+.footer__subscription {
   margin-left: 93px;
 }
 
-.subscription-label {
+.footer__subscription-label {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -91,16 +91,16 @@
   color: $secondary-text-color;
 }
 
-.subscription-title {
+.footer__subscription-title {
   display: block;
 }
 
-.subscription-container {
+.footer__subscription-container {
   margin-top: 20px;
   display: flex;
 }
 
-.subscription-input {
+.footer__subscription-input {
   padding: 15px 16px;
   width: 358px;
   border: 1px solid $subscription-border;
@@ -111,7 +111,7 @@
   outline: transparent;
 }
 
-.subscription-input {
+.footer__subscription-input {
   &::placeholder {
     font-weight: 400;
     font-size: 16px;
@@ -123,10 +123,10 @@
   }
 }
 
-.subscription-btn {
+.footer__subscription-btn {
   margin-left: 12px;
 }
 
-.subscription-btn-icon {
+.footer__subscription-btn-icon {
   margin-left: 10px;
 }

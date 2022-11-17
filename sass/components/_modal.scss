@@ -1,4 +1,4 @@
-.backdrop {
+.modal__backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -31,7 +31,7 @@
   padding: 40px 40px;
 }
 
-.btn-close {
+.modal__btn-close {
   margin-top: 9px;
   margin-right: 9px;
   position: absolute;
@@ -49,11 +49,13 @@
   }
 }
 
-.btn-close:hover .btn-close-icon {
-  fill: $color-accent;
+.modal__btn-close-icon {
+  .modal__btn-close:hover & {
+    fill: $color-accent;
+  }
 }
 
-.modal-title {
+.modal__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -62,16 +64,16 @@
   color: $title-color;
 }
 
-.form {
+.modal__form {
   margin-top: 12px;
 }
 
-.form__label {
+.modal__label {
   display: block;
   margin-top: 10px;
 }
 
-.form__label-text {
+.modal__label-text {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
@@ -79,7 +81,7 @@
   color: $primary-text-color;
 }
 
-.form__input-container {
+.modal__input-container {
   margin-top: 4px;
   position: relative;
 }
@@ -99,13 +101,13 @@
   }
 }
 
-.user-name,
-.user-phone,
-.user-email {
+.modal__user-name,
+.modal__user-phone,
+.modal__user-email {
   padding-left: 42px;
 }
 
-.input-icon {
+.modal__input-icon {
   margin-left: 15px;
   position: absolute;
   top: 0;
@@ -116,7 +118,7 @@
   }
 }
 
-.comment {
+.modal__comment {
   height: 120px;
   padding: 12px 16px;
   resize: none;
@@ -135,7 +137,7 @@
   }
 }
 
-.form__label-policy {
+.modal__label-policy {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -144,7 +146,7 @@
   align-items: center;
 }
 
-.form__policy-text {
+.modal__policy-text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,18 +165,18 @@
   }
 }
 
-.checkbox:checked + .form__policy-text::before {
+.modal__checkbox:checked + .modal__policy-text::before {
   background-color: $color-accent;
   border-color: $color-accent;
   background-image: url(../images/check.svg);
 }
 
-.policy-link {
+.modal__policy-link {
   margin-left: 7px;
   color: $color-accent;
 }
 
-.form__button {
+.modal__button {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
