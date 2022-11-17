@@ -18,15 +18,15 @@
   align-items: center;
   width: 170px;
   height: 92px;
-  border: 1px solid var(--icon-fill);
+  border: 1px solid $icon-fill;
   border-radius: 4px;
-  fill: var(--icon-fill);
+  fill: $icon-fill;
   transition-property: fill, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
-    fill: var(--color-accent);
-    border: 1px solid var(--color-accent);
+    fill: $color-accent;
+    border: 1px solid $color-accent;
   }
 }
