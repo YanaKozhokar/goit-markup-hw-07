@@ -164,7 +164,7 @@
 }
 
 .menu__close-icon {
-  &:hover {
+  .menu__close-btn:hover & {
     fill: $color-accent;
   }
 }
@@ -177,12 +177,15 @@
 
 .menu__item {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 34px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: $title-color;
   &.current {
     color: $color-accent;
+  }
+  @media screen and (min-width: 480px) {
+    font-size: 40px;
   }
 }
 
@@ -194,35 +197,48 @@
 
 .menu__phone {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 30px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: $color-accent;
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
+  }
 }
 
 .menu__email {
+  font-size: 20px;
   font-weight: 500;
-  font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: $primary-text-color;
+  @media screen and (min-width: 480px) {
+    font-size: 24px;
+  }
 }
 
 .menu__socials {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 64px;
 }
 
 .menu__socials-item {
+  font-size: 16px;
   font-weight: 500;
-  font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: $color-accent;
-  &:not(:last-child) {
-    padding-right: 10px;
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  @media screen and (max-width: 479px) {
+    margin-right: auto;
+  }
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+    &:not(:last-child) {
+      padding-right: 10px;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
   }
 }
